@@ -1,30 +1,30 @@
-✅ Project Title:
-"Full CI/CD Infrastructure for a Java Web App Using Jenkins, Docker, and AWS"
+CI/CD-ready Flask app used for Jenkins integration. Includes Docker support, Pytest tests
 
-🎯 Project Objectives:
-CI/CD Pipeline for a Java app (simulate with a basic Spring Boot app).
+This is a minimal Flask-based web application designed to demonstrate DevOps practices, especially Continuous Integration and Continuous Deployment (CI/CD) using Jenkins.
 
-Containerized Build with Docker, pushed to Docker Hub.
+## 🔧 Stack
+- Python 3.10
+- Flask
+- Pytest
+- Docker
+- Jenkins
 
-AWS EC2 Deployment using pull-based deployment.
+## 🧪 Run Tests with Pytest
 
-Automated Testing & Code Scan using Maven + JUnit + SonarQube.
+## 🐳 Build and Run Docker
+docker build -t jenkins-flask-demo .
+docker run -p 5000:5000 -d jenkins-flask-demo
 
-Infrastructure-as-Code (optionally) with Terraform for provisioning EC2.
+## ⚙️ CI/CD with Jenkins
+This repo includes a `Jenkinsfile` that performs:
+- Git Checkout
+- Python dependency install
+- Pytest execution
+- Docker build
+- Docker push to DockerHub
+- Slack/Email Notification
+- +Deploy+
 
-🔧 Tech Stack:
-Jenkins (already running on EC2)
-
-Docker (build + Hub push)
-
-GitHub (trigger repo)
-
-AWS EC2 (target deployment)
-
-Java (Spring Boot dummy app)
-
-Maven (build tool)
-
-SonarQube (optional for code quality)
-
-Bash / Groovy (for scripting)
+### ✅ Jenkins Requirements
+- Jenkins Docker plugin
+- `dockerhub-creds` credentials configured in Jenkins
